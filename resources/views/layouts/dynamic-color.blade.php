@@ -1,0 +1,72 @@
+<style>
+    :root {
+        @if(getOption('app_color_design_type', DEFAULT_COLOR) == DEFAULT_COLOR)
+         --primary-color: #cdef84;
+        --black-color: #121421;
+        --text-black: #1b1c17;
+        --para-color: #707070;
+        --hover-color: #afd449;
+        --black: #000000;
+        --colorOne: #707070;
+        --bColor: #707070;
+        --sidebar-text-color: #e7e3e3;
+        --sidebar-bg-color: #1b1c17;
+        --sidebar-hover-text-color: #cdef84;
+        @else
+         --primary-color: {{getOption('app_primary_color', '#cdef84')}};
+        --black-color: {{getOption('app_text_color', '#121421')}};
+        --text-black: {{getOption('app_text_color', '#1b1c17')}};
+        --para-color: {{getOption('app_text_secondary_color', '#707070')}};
+        --colorOne: {{getOption('app_text_secondary_color', '#707070')}};
+        --bColor: {{getOption('app_text_secondary_color', '#707070')}};
+        --hover-color: {{getOption('app_hover_color', '#afd449')}};
+        --black: {{getOption('app_text_color', '#000000')}};
+        --sidebar-text-color: {{getOption('app_sidebar_text_color', '#e7e3e3')}};
+        --sidebar-bg-color: {{getOption('app_sidebar_bg_color', '#1b1c17')}};
+        --sidebar-hover-text-color: {{getOption('app_sidebar_text_color', '#cdef84')}}ef;
+        @endif
+        --colorTwo: #ebedf0;
+        --colorThree: #fafafa;
+        --colorFour: #71e3ba;
+        --colorFive: #ed84ef;
+        --colorSix: #84a2ef;
+        --colorSeven: #f4f4ef;
+        --colorEight: #ea4335;
+        --colorEight-10: rgb(234 67 53 / 10%);
+        --colorNine: #f9f9f9;
+        --colorTen: #fdedeb;
+        --colorEleven: #eaeaea;
+        --colorTwelve: #0fa958;
+        --colorTwelve-10: rgb(15 169 88 / 10%);
+        --color13: #f5b40a;
+        --color13-10: rgb(245 180 10 / 10%);
+        --color14: #ebe7d5;
+        --color15: #e6ef84;
+        --color16: #84dcef;
+        --color17: #eef0f2;
+        --color18: #b7bdc6;
+        --color19: #596680;
+        --color20: #f0f0f0;
+        --color21: #ed0006;
+        --color22: #8d84ef;
+        --color23: #d3d9e5;
+        --color24: #cdffc5;
+        --stroke-color: #e4e6eb;
+        --scroll-track: #efefef;
+        --scroll-thumb: #dadada;
+        --text-black-50: rgb(27 28 23 / 50%);
+        --green: #4cbf4c;
+        --red: #f02e17;
+        --bg-one: #ededed;
+        --border-color: #ededed;
+        --border-color-one: #e5e8ec;
+        --border-color-deep: #b0b0b0;
+        --body-bg: #fbf9f1;
+        --white: #ffffff;
+        --white-10: rgb(255 255 255 / 10%);
+        --white-32: rgb(255 255 255 / 32%);
+        --white-70: rgb(255 255 255 / 70%);
+        --black-5: rgb(0 0 0 / 5%);
+        --black-10: rgb(0 0 0 / 10%);
+    }
+</style>

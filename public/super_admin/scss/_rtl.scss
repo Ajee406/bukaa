@@ -1,0 +1,289 @@
+/* RTL */
+.direction-rtl {
+    direction: rtl;
+    /* Sidebar */
+    .zSidebar {
+        left: auto;
+        right: 0;
+        @media screen and (max-width: 1023px) {
+            right: calc(-1 * toRem(240));
+        }
+        &.menuClose {
+            @media screen and (max-width: 1023px) {
+                left: auto;
+                right: 0;
+            }
+        }
+        &-submenu {
+            padding: toRem(10) toRem(47) toRem(10) 0 !important;
+        }
+    }
+    .zSidebar-menu {
+        > li {
+            > a {
+                &::after {
+                    left: auto;
+                    right: -14px;
+                }
+                &:hover,
+                &.active {
+                    &::after {
+                        right: -8px;
+                    }
+                }
+                ~ div .zSidebar-submenu {
+                    li {
+                        a {
+                            padding-left: 0;
+                            padding-right: toRem(12);
+                            &::before {
+                                top: toRem(9);
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+                &.has-subMenu-arrow {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    /* Main content */
+    .zMainContent {
+        left: 0;
+        right: toRem(240);
+        @media screen and (max-width: 1023px) {
+            right: 0;
+            width: 100%;
+        }
+    }
+    /* Header dropdown */
+    .headerUserDropdown {
+        .dropdown-menu {
+            --bs-position: start;
+        }
+    }
+    /* Counter item */
+    .count-item {
+        &-one {
+            .item {
+                &::before {
+                    left: 0;
+                    right: -30%;
+                    @media screen and (max-width: 1650px) {
+                        right: -20%;
+                    }
+                    @media screen and (max-width: 1350px) {
+                        right: -15%;
+                    }
+                    @media screen and (max-width: 1300px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    /* Table */
+    .zTable {
+        > :not(caption) {
+            &:first-child {
+                > * {
+                    > * {
+                        &:first-child {
+                            // padding-left: 0 !important;
+                            > * {
+                                border-radius: 0 toRem(10) toRem(10) 0;
+                            }
+                        }
+                        &:last-child {
+                            > * {
+                                border-radius: toRem(10) 0 0 toRem(10);
+                            }
+                        }
+                        > * {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        &-last-item-right {
+            > :not(caption) {
+                > * {
+                    &:not(&.child) {
+                        > * {
+                            &:last-child {
+                                text-align: left;
+                                div {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // .sf-select-without-search {
+        //     min-width: 135px;
+        //     padding-left: toRem(10) !important;
+        //     &::after {
+        //         right: 5px;
+        //     }
+        //     &.open {
+        //         .list {
+        //             li {
+        //                 white-space: normal !important;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    /* Action buttons */
+    .action__buttons,
+    .dropdown.dropdown-one {
+        button {
+            &.ms-auto {
+                margin-left: 0 !important;
+                margin-right: auto !important;
+            }
+        }
+    }
+    button {
+        &.edit {
+            &.ms-auto {
+                margin-left: 0 !important;
+                margin-right: auto !important;
+            }
+        }
+    }
+    .rtl-button {
+        &.ms-auto {
+            margin-left: 0 !important;
+            margin-right: auto !important;
+        }
+    }
+    /* Data table */
+    .dataTables_wrapper {
+        .dataTables_info {
+            float: right;
+        }
+        .dataTables_paginate {
+            float: left;
+        }
+        .tableSearch {
+            float: right !important;
+        }
+        .tableLengthInput {
+            float: left !important;
+        }
+    }
+    .tablePagi {
+        .paginate_button {
+            &.next,
+            &.previous {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    /* Profile Image preview */
+    .profileImage-upload {
+        .icon {
+            right: auto;
+            left: 0;
+        }
+        input {
+            left: 0 !important;
+            right: auto;
+        }
+    }
+    /* Photo upload file */
+    .servicePhotoUpload,
+    .file-upload-one {
+        label {
+            p {
+                &:first-child {
+                    border-radius: 0 toRem(5) toRem(5) 0;
+                    border-left: 0;
+                    border-right: toRem(1) solid $stroke-color;
+                    @media screen and (max-width: 575px) {
+                        border-left: toRem(1) solid $stroke-color;
+                        border-radius: toRem(5) toRem(5) 0 0;
+                    }
+                }
+                &:last-child {
+                    border-radius: toRem(5) 0 0 toRem(5);
+                    @media screen and (max-width: 575px) {
+                        border-radius: 0 0 toRem(5) toRem(5);
+                    }
+                }
+            }
+        }
+    }
+    /* price input */
+    .sf-input-wrap {
+        input {
+            // flex: 1 0 auto;
+            border-radius: 0 toRem(8) toRem(8) 0;
+            border-right: toRem(1) solid $stroke-color;
+            border-left: 0;
+        }
+        .currency {
+            border-radius: toRem(8) 0 0 toRem(8) !important;
+        }
+    }
+    /* Version update */
+    .rtl-versionUpdate-link {
+        &.text-end {
+            text-align: left !important;
+            a {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    /* passShowHide */
+    .passShowHide {
+        button {
+            top: 50%;
+            right: auto;
+            left: toRem(15);
+        }
+    }
+
+    /* Form */
+    .primary-form-group {
+        .primary-form-group-wrap {
+            position: relative;
+            .form-label {
+                left: auto;
+                right: toRem(13);
+                // padding: toRem(0) toRem(5);
+            }
+            .primary-form-control {
+                border-radius: toRem(12);
+            }
+            // select {
+            //     &.primary-form-control {
+            //         color: $colorOne;
+            //     }
+            // }
+            // // &:has(.summernoteOne) {
+            // .summernoteOne ~ .note-editor {
+            //     border: toRem(1) solid $border-color !important;
+            //     border-radius: toRem(12);
+            //     padding: toRem(15) toRem(20);
+            // }
+        }
+    }
+
+    /* Frontend */
+    .zAccordion-one .accordion-button::after {
+        margin-right: auto;
+        margin-left: inherit;
+    }
+}
